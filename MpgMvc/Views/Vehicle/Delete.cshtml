@@ -1,0 +1,160 @@
+﻿@model MpgMvc.Models.Vehicle
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vehicle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatePurchased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatePurchased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateSold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateSold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MileagePurchased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MileagePurchased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MileageCurrent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MileageCurrent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MileageSold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MileageSold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePurchased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePurchased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceSold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceSold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdateDt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdateDt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefaultVehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefaultVehicle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vin)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

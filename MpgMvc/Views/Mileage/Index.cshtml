@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MpgMvc.Models.Mileage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Miles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gallons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MPG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceGallon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateDt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateDt)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.User.Username)
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.Date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vehicle.Make)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vehicle.Model)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Miles)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gallons)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MPG)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PriceGallon)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TotalCost)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Comment)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CreateDt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateDt)
+        </td>*@
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>
