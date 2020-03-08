@@ -9,7 +9,6 @@ namespace MpgMvc.Models
         public int ID { get; set; }
         [DisplayName("User")]
         public string Username { get; set; }
-        public string Password { get; set; }
         public DateTime LastLoginDt { get; set; }
         public DateTime CreatedDt { get; set; }
 

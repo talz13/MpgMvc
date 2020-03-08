@@ -10,7 +10,7 @@ namespace MpgMvc.DAL
         {
             var users = new List<User>
             {
-            new User{ID=1,Username="talz13",Password="test1234",LastLoginDt=DateTime.Parse("2020/02/25"),CreatedDt=DateTime.Parse("2020/02/24")}
+            new User{ID=1,Username="TestUser",LastLoginDt=DateTime.Parse("2020/02/25"),CreatedDt=DateTime.Parse("2020/02/24")}
             };
 
             users.ForEach(s => context.Users.Add(s));
